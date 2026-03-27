@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Monsoon Breakout</title>
+    <style>
+      html, body { margin:0; width:100%; height:100%; overflow:hidden; background:#0f1418; color:#fff; font-family:system-ui, sans-serif; }
+      #game { position:relative; width:100%; height:100%; }
+      .world { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:640px; height:640px; background:#1a2329; border:2px solid #607d8b; box-shadow:0 0 30px rgba(0,0,0,.4) inset; }
+      .tile { position:absolute; width:20px; height:20px; box-sizing:border-box; }
+      .wall{ background:#263238; }
+      .puddle{ background:#4e342e; opacity:.7; }
+      .desk{ background:#5d4037; }
+      .cage{ background:#ff6d00; }
+      .truck{ background:#2e7d32; }
+      .basket{ background:#ef5350; border-radius:50%; }
+      .entity { position:absolute; width:16px; height:16px; transform:translate(-50%,-50%); border-radius:50%; }
+      .player { background:#8d6e63; border:2px solid #111; }
+      .tiger { background:#ff8f00; border:2px solid #111; width:18px; height:18px; }
+      .guard { background:#1565c0; border:2px solid #111; }
+      .camera { background:#ff1744; width:10px; height:10px; }
+      .cone { position:absolute; transform-origin:left center; height:6px; background:rgba(255,23,68,.22); border-radius:999px; }
+      .hud{ position:absolute; inset:0; pointer-events:none; }
+      .chip{ position:absolute; background:rgba(0,0,0,.45); border:1px solid #90a4ae; padding:6px 10px; }
+      #meat{ left:10px; top:10px; }
+      #alarm{ right:10px; top:10px; }
+      #help{ left:50%; transform:translateX(-50%); top:10px; }
+      #roar{ left:50%; transform:translateX(-50%); bottom:10px; width:220px; height:12px; border:1px solid #eee; background:#333; }
+      #roarFill{ width:0%; height:100%; background:#ff8f00; }
+      .overlay{ position:absolute; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.7); pointer-events:auto; }
+      .card{ background:#1b252b; border:2px solid #90a4ae; padding:16px; min-width:280px; text-align:center; }
+      .btn{ margin:4px; padding:8px 10px; cursor:pointer; }
+      #flash{ position:absolute; inset:0; background:rgba(255,23,68,.6); opacity:0; pointer-events:none; }
+    </style>
+  </head>
+  <body>
+    <div id="game"></div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
